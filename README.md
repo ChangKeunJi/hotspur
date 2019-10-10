@@ -1,9 +1,14 @@
 ## Motivation 
 
-After Stephen Grider's react tutorial and this 
+After Stephen Grider's react tutorial and this
+
 youtube tutorial https://www.youtube.com/playlist?list=PL4cUxeGkcC9iWstfXntcj8f-dFZ4UtlN3
 
-I decided to make a project which includes Redux and Back-end functions with Firebase.
+I wanted to build a little bit challenging project with Redux and Back-end(firebase)
+
+with Auth and Realtime Database.
+
+
 
 ## Key features
 
@@ -11,7 +16,9 @@ I decided to make a project which includes Redux and Back-end functions with Fir
 
 - Football Data API Call for Upcoming Matches (https://www.football-data.org)
 
-- Auth, Database, Storage, Hosting and Cloud Functions with Firebase
+- Database, Storage, Hosting and Cloud Functions with Firebase
+
+- Sign In / Sign Up (with Image) / Log Out
 
 - Responsive Web
 
