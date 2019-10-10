@@ -1,27 +1,4 @@
-const initState = {
-  posts: [
-    {
-      id: 1,
-      username: "Kane",
-      body:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, magnam."
-    },
-    {
-      id: 2,
-      username: "Kane",
-      body:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, magnam."
-    },
-    {
-      id: 3,
-      username: "Kane",
-      body:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, magnam."
-    }
-  ]
-};
-
-const postReducer = (state = initState, action) => {
+const postReducer = (state = {}, action) => {
   switch (action.type) {
     case "CREATE_POST":
       console.log("created post", action.post);
@@ -34,6 +11,7 @@ const postReducer = (state = initState, action) => {
       return state;
     case "DELETE_POST_ERROR":
       console.log("Delete Post Error", action.err);
+      return state;
     default:
       return state;
   }

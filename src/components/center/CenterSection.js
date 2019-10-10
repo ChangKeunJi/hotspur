@@ -10,7 +10,7 @@ import { compose } from "redux";
 
 class CenterSection extends Component {
   render() {
-    const { posts, auth, profileInfo } = this.props;
+    const { posts, profileInfo } = this.props;
 
     const path = () => {
       if (window.location.pathname === "/signin") {

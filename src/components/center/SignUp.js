@@ -34,6 +34,7 @@ class SignUp extends Component {
 
   handleUpload = e => {
     e.preventDefault();
+
     const { image } = this.state;
     const uploadTask = storage.ref(`images/${image.name}`).put(image);
     uploadTask.on(
@@ -60,7 +61,7 @@ class SignUp extends Component {
   };
 
   render() {
-    const { auth } = this.props;
+    const { auth, authError } = this.props;
 
     if (auth.uid) return <Redirect to="/" />;
 
@@ -107,6 +108,9 @@ class SignUp extends Component {
             />
           </div>
 
+          <div>
+            <label>Profile Image (Optional)</label>
+          </div>
           <div className="input-group">
             <div className="custom-file">
               <input
@@ -122,8 +126,6 @@ class SignUp extends Component {
             <div className="input-group-append">
               <button
                 className="btn btn-outline-secondary"
-                // type="button"
-                // id="inputGroupFileAddon04"
                 onClick={this.handleUpload}
               >
                 Upload
@@ -132,16 +134,14 @@ class SignUp extends Component {
           </div>
 
           <div className="d-flex flex-column justify-content-center text-center bg-light">
-            <div>
-              {/* <progress value={this.state.progress} max="100" /> */}
-              {renderProgressbar()}
-            </div>
+            <div>{renderProgressbar()}</div>
             <div>
               <img
                 src={this.state.url}
                 className="img-fluid mt-2 mb-2 text-center border border-primary"
                 height="300"
                 width="200"
+                alt=""
               />
             </div>
           </div>
@@ -150,9 +150,9 @@ class SignUp extends Component {
             <button type="submit" className="btn btn-primary">
               Sign Up
             </button>
-            {/* <div className="text-danger center">
+            <div className="text-danger center mt-4">
               {authError ? <p>{authError}</p> : null}
-            </div> */}
+            </div>
           </div>
         </form>
       </div>
@@ -162,7 +162,8 @@ class SignUp extends Component {
 
 const mapStateToProps = state => {
   return {
-    auth: state.firebase.auth
+    auth: state.firebase.auth,
+    authError: state.auth.authError
   };
 };
 

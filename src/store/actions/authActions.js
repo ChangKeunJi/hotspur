@@ -36,6 +36,7 @@ export const signUp = newUser => {
       .auth()
       .createUserWithEmailAndPassword(newUser.email, newUser.password)
       .then(resp => {
+        if (!newUser.username) newUser.username = "Anonymous";
         return firestore
           .collection("users")
           .doc(resp.user.uid)

@@ -35,6 +35,6 @@ const mapStateToProps = state => {
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
-    { collection: "notifications", limit: 6, orderBy: ["time", "desc"] }
+    { collection: "notifications", limit: 5, orderBy: ["time", "desc"] }
   ])
 )(RightSection);

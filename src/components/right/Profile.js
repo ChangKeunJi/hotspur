@@ -8,6 +8,7 @@ const Profile = props => {
     if (props.profileInfo.url) {
       return (
         <img
+          alt=""
           src={props.profileInfo.url}
           className="profile-image-profile mb-3 border border-primary"
         />
