@@ -7,14 +7,11 @@ import { deletePost } from "../../store/actions/postActions";
 class Post extends Component {
   handleDelete = () => {
     const { post } = this.props;
-
     this.props.deletePost(post);
-    console.log(post);
   };
 
   render() {
     const { post, auth } = this.props;
-
     const renderImage = () => {
       if (post.url) {
         return <img src={post.url} className="profile-image" alt="" />;
@@ -53,7 +50,6 @@ class Post extends Component {
           </div>
           <div className="card-footer  d-flex justify-content-between">
             <span className="font-weight-bold">{post.username}</span>
-
             <span className="text-right">
               {renderIcon()}
               {moment(post.createdAt.toDate()).calendar()}

@@ -26,8 +26,6 @@ class Events extends Component {
   }
 
   render() {
-    // console.log(this.state.matches);
-
     const renderMatch = match => {
       let team =
         match.awayTeam.id === 73 ? match.homeTeam.name : match.awayTeam.name;

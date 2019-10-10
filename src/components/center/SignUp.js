@@ -98,7 +98,7 @@ class SignUp extends Component {
             />
           </div>
           <div className="input-field">
-            <label htmlFor="username">User Name</label>
+            <label htmlFor="username">User Name (Optional)</label>
             <input
               type="text"
               id="username"
