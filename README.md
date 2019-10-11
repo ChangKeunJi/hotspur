@@ -18,17 +18,12 @@ with Auth and Realtime Database.
 
 - Database, Storage, Hosting and Cloud Functions with Firebase
 
+- Realtime Notification
+
 - Sign In / Sign Up (with Image) / Log Out
 
 - Responsive Web
 
-## Stacks
-
-- React & Redux
-
-- Firebase 
-
-- Bootstrap
 
 ## Screen Shots
 
