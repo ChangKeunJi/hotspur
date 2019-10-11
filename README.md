@@ -28,7 +28,7 @@ with Auth and Realtime Database.
 ## Screen Shots
 
 ![2019-10-10 (2)](https://user-images.githubusercontent.com/46767604/66565990-8e41ec80-ebaf-11e9-9a5d-0472324224f5.png)
-![2019-10-10 (3)](https://user-images.githubusercontent.com/46767604/66565999-9437cd80-ebaf-11e9-8a01-7ce140cc9816.png)
+![2019-10-11 (9)](https://user-images.githubusercontent.com/46767604/66615918-650a7600-ec1a-11e9-8b37-52b9b675dcab.png)
 
 
 
